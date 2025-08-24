@@ -63,6 +63,8 @@
 \ProcessOptions
 \LoadClass{book}
 \RequirePackage{vmargin}
+\setmarginsrb{2cm}{2cm}{2cm}{2cm}{0pt}{0mm}{0pt}{0mm}
+% Marges : gauche, haut, droite, bas, en-tête, espace en-tête, pied, espace pied
 \RequirePackage{manfnt}
 \RequirePackage{stmaryrd}
 % \usepackage{color}
@@ -132,3 +134,4 @@
 \newcommand{\degrees}{$^\circ$}
 
 \newcommand{\attention}[1]{\vspace{.3cm} \textdbend ~~ #1}
+

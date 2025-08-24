@@ -1,8 +1,22 @@
 \documentclass{livrerecettes}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\usepackage{anyfontsize}
+\renewcommand{\normalsize}{\fontsize{14pt}{16pt}\selectfont}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{multicol} % requis pour la macro \ingredients
+
+\usepackage[french]{babel}
+\usepackage{imakeidx}
+
+
 
 \begin{document}
 
@@ -10,6 +24,22 @@
 \author{Famille Poirier Ruiz Pacheco}
 \date{\today}
 \maketitle
+
+\tableofcontents
+
+\chapter{Entrées}
+\newpage
+\input{recettes/001_entrees/001.tex}
+
+
+\chapter{Plats}
+\newpage
+\input{recettes/002_plats/001.tex}
+\newpage
+\input{recettes/002_plats/002.tex}
+
+\chapter{Desserts}
+\newpage
 
 \input{recettes/003_desserts/001.tex}
 
