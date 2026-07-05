@@ -1,4 +1,53 @@
-*.aux
+# Fichiers temporaires et systèmes
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Répertoires de dépendances
+node_modules/
+vendor/
+bin/
+obj/
+*.o
+*.a
+
+# Fichiers de logs
 *.log
+logs/
+
+# Fichiers de configuration sensibles
+.env
+config.local.json
+secrets.json
+
+# IDE et éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers de compilation
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Fichiers système
+~*
+*~
+
+# Fichiers de cache
+.cache/
+*.cache
+
+# Fichiers de test
+coverage.out
 *.out
-*.tns
+
+# Fichiers de documentation
+*.md
+README.md
+
+# Opencode specific files
+.opencode
