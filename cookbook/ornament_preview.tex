@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage{tikz}
+\usepackage{pgfornament}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[french]{babel}
+\pagenumbering{gobble}
+\begin{document}
+\begin{center}
+  {\LARGE Aper\c{c}u des ornements pgfornament}\par\medskip
+  {\small Changez le numéro pour l'utiliser dans `\texttt{\textbackslash PageOrnamentID}`}
+\end{center}
+\vspace{1em}
+\begin{center}
+\begin{tabular}{cccc}
+  \pgfornament[width=3cm]{1} & \pgfornament[width=3cm]{2} & \pgfornament[width=3cm]{3} & \pgfornament[width=3cm]{4} \\
+  1 & 2 & 3 & 4 \\
+  \\
+  \pgfornament[width=3cm]{5} & \pgfornament[width=3cm]{6} & \pgfornament[width=3cm]{7} & \pgfornament[width=3cm]{8} \\
+  5 & 6 & 7 & 8 \\
+  \\
+  \pgfornament[width=3cm]{9} & \pgfornament[width=3cm]{10} & \pgfornament[width=3cm]{11} & \pgfornament[width=3cm]{12} \\
+  9 & 10 & 11 & 12 \\
+\end{tabular}
+\end{center}
+\vspace{1em}
+\begin{center}\small Si tu veux d'autres gammes, je peux en générer plus (ex.: 13--24, 25--36...).\end{center}
+\end{document}

@@ -72,6 +72,28 @@
 \RequirePackage{amsthm}
 \pagestyle{plain}
 
+% Decorative corner ornaments: uses pgfornament + tikz + eso-pic
+% Call \EnablePageOrnaments in your document to activate them.
+\RequirePackage{tikz}
+\RequirePackage{pgfornament}
+\RequirePackage{eso-pic}
+
+% Configurables: single ID, width, side shift and top offset
+\newcommand{\PageOrnamentID}{63}
+\newcommand{\PageOrnamentWidth}{2cm}
+\newcommand{\PageOrnamentSideXShift}{1cm} % horizontal distance from side
+\newcommand{\PageOrnamentTopOffset}{0.9cm} % vertical distance from top edge
+
+% Place ornaments on both top-left and top-right for every page
+\newcommand{\EnablePageOrnaments}{%
+    \AddToShipoutPictureBG{%
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[anchor=north west, xshift=\PageOrnamentSideXShift, yshift=-\PageOrnamentTopOffset] at (current page.north west){\pgfornament[width=\PageOrnamentWidth]{\PageOrnamentID}};
+            \node[anchor=north east, xshift=-\PageOrnamentSideXShift, yshift=-\PageOrnamentTopOffset] at (current page.north east){\pgfornament[width=\PageOrnamentWidth]{\PageOrnamentID}};
+        \end{tikzpicture}%
+    }
+}
+
 
 \setcounter{secnumdepth}{2}	% subsubsections not numbered
 \setcounter{tocdepth}{3}	% subsubsections in the .toc file
